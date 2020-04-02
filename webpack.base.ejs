@@ -20,12 +20,17 @@ const config = {
         ],
       },
       {
-        test: /\.css|less$/,
+        test: <%= cssPreprocessor==='none'?/\.css/:cssPreprocessor==='less'?/\.css|less$/:/\.css|scss|sass$/ %>,
         include: [path.resolve(__dirname, "src")],
         use: [
           { loader: "style-loader" },
           { loader: "css-loader", options: { modules: true } },
-          { loader: "less-loader" },
+          <% if (cssPreprocessor==='less') { %>
+            { loader: "less-loader" },
+          <% } %>
+          <% if (cssPreprocessor==='sass') { %>
+            { loader: "sass-loader" },
+          <% } %>
         ],
       },
     ],
