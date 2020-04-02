@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+  box-sizing: border-box;
+
+  .item {
+    cursor: pointer;
+    text-align: center;
+    min-width: 88px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    background: rgba(255, 255, 255, 1);
+    border-radius: 2px;
+    border: 1px solid rgba(217, 217, 217, 1);
+  }
+
+  .checked {
+    .item;
+    border: 1px solid rgba(0, 155, 255, 1);
+    color: rgba(0, 155, 255, 1);
+    position: relative;
+
+    .checkImg {
+      position: absolute;
+      bottom: 0;
+      right: -1px;
+      width: 19px;
+      height: 18px;
+    }
+  }
+
+  & div {
+    margin-right: 7px;
+  }
+
+  & div:last-child {
+    margin-right: 0;
+  }
+}
