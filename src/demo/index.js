@@ -1,10 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
+import YourComponent from "../index";
 import styles from "./index.less";
 
 function Main() {
-  return <section>引用组件的地方</section>;
+  return (
+    <section>
+      <YourComponent />
+    </section>
+  );
 }
 
 ReactDOM.render(<Main />, document.getElementById("root"));
