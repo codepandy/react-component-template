@@ -1,7 +1,7 @@
 {
-  "name": "{{name}}",
+  "name": "",
   "version": "1.0.0",
-  "description": "{{description}}",
+  "description": "",
   "main": "./build/bundle.js",
   "files": [
     "build"
@@ -40,11 +40,11 @@
   "author": "{{author}}",
   "repository": {
     "type": "git",
-    "url": "{{repositoryUrl}}"
+    "url": ""
   },
   "license": "ISC",
   "bugs": {
-    "url": "{{issues}}"
+    "url": ""
   },
-  "homepage": "{{readme}}"
+  "homepage": ""
 }

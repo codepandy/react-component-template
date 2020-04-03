@@ -26,10 +26,10 @@ const config = {
           { loader: "style-loader" },
           { loader: "css-loader", options: { modules: true } },
           <% if (cssPreprocessor==='less') { %>
-            { loader: "less-loader" },
+          { loader: "less-loader" },
           <% } %>
           <% if (cssPreprocessor==='sass') { %>
-            { loader: "sass-loader" },
+          { loader: "sass-loader" },
           <% } %>
         ],
       },
