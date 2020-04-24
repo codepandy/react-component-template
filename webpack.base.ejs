@@ -24,7 +24,10 @@ const config = {
         include: [path.resolve(__dirname, "src")],
         use: [
           { loader: "style-loader" },
-          { loader: "css-loader", options: { modules: true } },
+          { loader: "css-loader", options: { modules: true, importLoaders: 2 } },
+          {
+            loader: "postcss-loader",
+          },
           <% if (cssPreprocessor==='less') { %>
           { loader: "less-loader" },
           <% } %>
