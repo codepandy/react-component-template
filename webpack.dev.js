@@ -13,12 +13,14 @@ module.exports = merge(baseConfig, {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/demo/index.html"),
-      title: "测试GroupTag",
+      title: "测试",
     }),
   ],
   devServer: {
     port: 8012,
-    contentBase: path.resolve(__dirname, "dist"),
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
     compress: true,
     open: true,
   },

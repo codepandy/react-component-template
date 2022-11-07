@@ -1,28 +1,11 @@
-import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
+import React from "react";
 import styles from "./index.less";
+import classNames from "classnames";
 
-export default class YourComponent extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    const { className, style, children } = this.props;
-
-    return (
-      <div className={`${styles.container} ${className}`} style={style}>
-        自定义组件
-        {children}
-      </div>
-    );
-  }
-}
-
-YourComponent.propTypes = {
-  className: PropTypes.any,
-  style: PropTypes.object,
+export const YourComponent = ({ text, className = "" }) => {
+  return (
+    <div className={classNames(styles["wenmu-toast"], className)}>{text}</div>
+  );
 };
 
-YourComponent.defaultProps = {};
+export default YourComponent;

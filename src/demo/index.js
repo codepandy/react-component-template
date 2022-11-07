@@ -1,14 +1,20 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import YourComponent from "../index";
+import { createRoot } from "react-dom/client";
+import Toast from "../index";
 import styles from "./index.less";
+import icon from "./icon.png";
 
+function Icon() {
+  return <img src={icon} alt="" className={styles.icon} />;
+}
 function Main() {
+  const onClick = () => {};
   return (
-    <section>
-      <YourComponent />
+    <section onClick={onClick}>
+      <Toast text="hello" />
     </section>
   );
 }
 
-ReactDOM.render(<Main />, document.getElementById("root"));
+const root = createRoot(document.getElementById("root"));
+root.render(<Main />);
