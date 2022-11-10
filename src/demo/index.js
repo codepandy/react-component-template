@@ -1,6 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import Toast from "../index";
+import YourComponent from "../index";
 import styles from "./index.less";
 import icon from "./icon.png";
 
@@ -11,7 +11,7 @@ function Main() {
   const onClick = () => {};
   return (
     <section onClick={onClick}>
-      <Toast text="hello" />
+      <YourComponent text="hello" />
     </section>
   );
 }
